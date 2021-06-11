@@ -41,3 +41,50 @@
 -- Get the album title and the artist name from all albums.
 -- select album.title, artist.name from artist
 -- join album on album.artist_id = artist.artist_id;
+
+-- Artist Table
+-- Select 10 artists in reverse alphabetical order.
+-- select * from artist order by name desc  limit(10);
+
+-- Select all artists that start with the word ‘Black’.
+-- select * from artist where name ilike 'black%';
+
+-- Select all artists that contain the word ‘Black’.
+-- select * from artist where name ilike '%Black%';
+
+-- Employee Table
+-- Find the birthdate for the youngest employee.
+-- select max(birth_date) from employee;
+
+-- Find the birthdate for the oldest employee.
+-- select min(birth_date) from employee;
+
+-- Invoice Table
+-- Count how many orders were in CA, TX, or AZ (use IN).
+-- select count(*) from invoice where billing_state in('CA', 'TX', 'AZ');
+
+-- Get the average total of the orders.
+-- select avg(total) from invoice;
+
+-- More Join Queries
+-- Get all playlist_track track_ids where the playlist name is Music.
+-- select pt.track_id from playlist_track pt join playlist pl
+-- on pt.playlist_id = pl.playlist_id
+-- where pl.name = 'Music';
+
+-- Get all track names for playlist_id 5.
+-- select track.name from track 
+-- join playlist_track on playlist_track.track_id = track.track_id
+-- join playlist on playlist_track.playlist_id = playlist.playlist_id
+-- where playlist.playlist_id = 5;
+
+-- Get all track names and the playlist name that they’re on ( 2 joins ).
+-- select track.name, playlist.name from track 
+-- join playlist_track on playlist_track.track_id = track.track_id
+-- join playlist on playlist_track.playlist_id = playlist.playlist_id;
+
+-- Get all track names and album titles that are the genre Alternative & Punk ( 2 joins ).
+-- select track.name, album.title from track
+-- join album on track.album_id = album.album_id
+-- join genre on track.genre_id = genre.genre_id
+-- where genre.name = 'Alternative & Punk';
