@@ -1,8 +1,20 @@
+-- Artist Table
+-- Add 3 new artists to the artist table using INSERT. (It’s already created.)
+
+-- insert into artist (name) values ('Gregory Alan Isakov'), ('Hozier'), ('Smallpools');
+
+-- Select 5 artists in alphabetical order.
+-- select * from artist
+-- order by name asc
+-- limit 5;
+
+-- Employee Table
 -- List all employee first and last names only that live in Calgary.
 -- select first_name, last_name from employee where city = 'Calgary';
 
 -- Find everyone that reports to Nancy Edwards (Use the ReportsTo column). You will need to query the employee table to find the Id for Nancy Edwards
 -- select employee_id from employee where first_name = 'Nancy' and last_name = 'Edwards';
+
 -- select * from employee where reports_to = 2;
 
 -- Count how many people live in Lethbridge.
@@ -18,10 +30,10 @@
 -- select min(total) from invoice;
 
 -- Find all orders bigger than $5.
--- select total from invoice where total > 5;
+-- select * from invoice where total > 5;
 
 -- Count how many orders were smaller than $5.
--- select count(total) from invoice where total < 5;
+-- select count(*) from invoice where total < 5;
 
 -- Get the total sum of the orders.
 -- select sum(total) from invoice;
